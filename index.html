@@ -286,7 +286,7 @@
             width: 220px;
             height: 220px;
             border-radius: 50%;
-            overflow: hidden;
+            overflow: hidden; /* чтобы фото обрезалось по кругу */
             border: 4px solid var(--accent);
             display: flex;
             align-items: center;
@@ -294,7 +294,7 @@
             margin: 0 auto;
             box-shadow: 0 0 30px var(--shadow);
             transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
-            background: var(--bg-card);
+            background: var(--bg-card); /* фон на случай, если фото не загрузится */
         }
 
         .about-avatar .avatar-circle img {
@@ -501,14 +501,12 @@
 
         .hobby-card:hover {
             border-color: var(--accent);
-            transform: translateY(-4px);
         }
 
         .hobby-card i {
             font-size: 3rem;
             color: var(--accent);
             margin-bottom: 12px;
-            transition: color 0.3s;
         }
 
         .hobby-card h4 {
@@ -520,25 +518,6 @@
         .hobby-card p {
             color: var(--text-secondary);
             font-size: 0.9rem;
-        }
-
-        .hobby-card .hobby-link {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 6px 18px;
-            border-radius: 20px;
-            background: var(--accent);
-            color: var(--bg-body);
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .hobby-card .hobby-link:hover {
-            background: var(--accent-hover);
-            transform: scale(1.05);
         }
 
         /* ---------- CONTACT / FOOTER ---------- */
@@ -737,6 +716,7 @@
                 </div>
                 <div class="about-avatar">
                     <div class="avatar-circle">
+                        <!-- ВСТАВЛЯЕМ ФОТО (убедитесь, что файл лежит рядом с index.html) -->
                         <img src="photo_2024-10-08_00-00-29.jpg" alt="Фото Зои" />
                     </div>
                     <p style="margin-top: 15px; color: var(--text-secondary); font-size: 0.9rem;">#developer #creative</p>
@@ -846,6 +826,17 @@
                     <span class="badge">HTML / CSS / JS</span>
                 </div>
 
+                <!-- НОВЫЙ ПРОЕКТ: игра-физика -->
+                <div class="project-card">
+                    <div class="project-icon"><i class="fas fa-rocket"></i></div>
+                    <h4>Интерактивная физика</h4>
+                    <p>Игра с симуляцией физики, управление объектами и гравитация.</p>
+                    <a href="https://zoest20009.github.io/physics/" target="_blank" style="display: inline-block; margin-top: 10px; padding: 6px 16px; border-radius: 20px; background: var(--accent); color: var(--bg-body); font-weight: 500; font-size: 0.85rem; transition: 0.3s;">
+                        <i class="fas fa-play"></i> Играть
+                    </a>
+                    <span class="badge" style="display: block; margin-top: 8px;">JavaScript / Canvas</span>
+                </div>
+
             </div>
             <p style="text-align:center; color:var(--text-muted); margin-top:20px; font-size:0.9rem;">
                 * Здесь будут ваши реальные разработки
@@ -880,16 +871,16 @@
                 <!-- Новая карточка — Музыка -->
                 <div class="hobby-card">
                     <i class="fas fa-music"></i>
-                    <h4>Музыка</h4>
-                    <p>Создаю мелодии и экспериментирую со звуком. Вот один из моих треков:</p>
-                    <a href="https://suno.com/s/1iVu90WhQfQ01iGO" target="_blank" class="hobby-link">
+                    <h4>Музыкальное творчество</h4>
+                    <p>Создаю треки в Suno. Вот один из моих последних экспериментов:</p>
+                    <a href="https://suno.com/s/1iVu90WhQfQ01iGO" target="_blank" style="display: inline-block; margin-top: 10px; padding: 6px 16px; border-radius: 20px; background: var(--accent); color: var(--bg-body); font-weight: 500; font-size: 0.85rem; transition: 0.3s;">
                         <i class="fas fa-play"></i> Слушать трек
                     </a>
                 </div>
 
             </div>
             <p style="text-align:center; color:var(--text-muted); margin-top:15px; font-size:0.9rem;">
-                Люблю сочетать код, творчество и музыку 🎨🎵
+                🎨🎵 Код и творчество — два моих главных языка
             </p>
         </div>
     </section>
